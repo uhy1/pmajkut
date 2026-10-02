@@ -427,3 +427,77 @@ img[src="pmajkut.jpg"] {
     pointer-events: none;       /* Całkowicie wyłącza reakcję na kliknięcia i przeciąganie */
 }
 
+
+/* Polityka prywatności */
+/* Styl linku w stopce */
+.footer-privacy a {
+    color: #94a3b8;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.footer-privacy a:hover {
+    color: #ffffff;
+}
+
+/* Styl okna modalnego (tło zasłaniające stronę) */
+.modal-overlay {
+    display: none; /* Domyślnie ukryte */
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(15, 23, 42, 0.6); /* Ciemne, półprzezroczyste tło */
+    backdrop-filter: blur(4px);
+    z-index: 9999; /* Zawsze na samej górze */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Zawartość okna modalnego */
+.modal-content {
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    max-width: 650px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto; /* Przewijanie tekstu prawnego, jeśli jest za długi */
+    position: relative;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Przycisk zamknięcia (X) */
+.modal-close {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.modal-close:hover {
+    color: #334155;
+}
+
+/* Formatowanie tekstu wewnątrz okna */
+.modal-content h2 {
+    color: #0b5394;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.modal-meta {
+    font-size: 12px;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+.modal-content h3 {
+    color: #2c3e50;
+    font-size: 15px;
+    margin: 15px 0 5px 0;
+}
+.modal-content p {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+}
+

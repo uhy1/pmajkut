@@ -206,8 +206,62 @@
         
             <!-- Prawa autorskie -->
             <p class="footer-copy">&copy; 2026 lek. Paulina Majkut. Wszystkie prawa zastrzeżone. Projekt: <a href="https://aiim.pl" target="_blank" rel="noopener"><strong class="righteous-regular">aiim.pl</strong></a>.</p>
+
+	    <p class="footer-privacy">
+	        <a href="#" id="openPrivacyBtn">Polityka Prywatności i RODO</a>
+	    </p>
+
         </div>
     </footer>
+
+
+<!-- Okienko Modalne z Polityką Prywatności -->
+<div id="privacyModal" class="modal-overlay">
+    <div class="modal-content">
+        <span class="modal-close" id="closePrivacyBtn">&times;</span>
+        
+        <h2>Polityka Prywatności i RODO</h2>
+        <p class="modal-meta">Ostatnia aktualizacja: 02.10.2026 r.</p>
+        
+        <h3>1. Administrator Danych Osobowych</h3>
+        <p>Administratorem danych osobowych pacjentów jest Specjalistyczna Praktyka Lekarska: <strong>lek. Paulina Majkut, ul. Grunwaldzka 1, 37-500 Jarosław</strong>.</p>
+        
+        <h3>2. Zakres i Cel Przetwarzania Danych</h3>
+        <p>Niniejsza strona internetowa ma charakter wyłącznie informacyjny (wizytówka). Strona nie zawiera formularzy kontaktowych, systemów komentarzy ani systemów rejestracji online. Administrator nie zbiera, nie przetwarza ani nie przechowuje żadnych danych osobowych użytkowników za pośrednictwem tej witryny internetowej.</p>
+        
+        <h3>3. Rejestracja Telefoniczna</h3>
+        <p>Wszelkie dane osobowe oraz medyczne przekazywane przez pacjentów podczas rejestracji telefonicznej pod numerem 16 621 50 22 są przetwarzane wyłącznie w celu umówienia wizyty lekarskiej oraz prowadzenia dokumentacji medycznej, zgodnie z obowiązującymi przepisami prawa medycznego oraz ustawą o prawach pacjenta.</p>
+        
+        <h3>4. Pliki Cookies (Ciasteczka) i Logi Serwera</h3>
+        <p>Strona może wykorzystywać podstawowe pliki cookies oraz logi serwera o charakterze technicznym, które są niezbędne do prawidłowego i bezpiecznego wyświetlania zawartości witryny na urządzeniach użytkowników. Dane te mają charakter zanonimizowany (np. adres IP, typ przeglądarki) i nie pozwalają na identyfikację tożsamości użytkownika.</p>
+        
+        <h3>5. Prawa Użytkownika</h3>
+        <p>W związku z przetwarzaniem danych w ramach praktyki lekarskiej, pacjentom przysługuje prawo do dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, a także prawo do wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (UODO).</p>
+    </div>
+</div>
+
+<!-- Skrypt obsługujący otwieranie i zamykanie okienka -->
+<script>
+    const modal = document.getElementById("privacyModal");
+    const openBtn = document.getElementById("openPrivacyBtn");
+    const closeBtn = document.getElementById("closePrivacyBtn");
+
+    openBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+        modal.style.display = "flex";
+    });
+
+    closeBtn.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+
+    window.addEventListener("click", function(e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+</script>
+
 
 
 
