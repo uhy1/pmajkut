@@ -20,6 +20,11 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: #f4f6f9;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
     
     /* Ustawienia nieruchomego tła dopasowanego do całego ekranu */
     background-image: linear-gradient(rgba(244, 246, 249, 0.6), rgba(244, 246, 249, 0.6)), url("pluco.png");
@@ -27,6 +32,15 @@ body {
     background-position: center center; /* Środkowanie obrazu */
     background-size: cover; /* Obraz rozciąga się i dopasowuje do całego ekranu */
     background-repeat: no-repeat;
+}
+
+/* WAŻNE: Musimy przywrócić możliwość zaznaczania tekstu tam, gdzie to ważne dla pacjenta (np. numer telefonu, adres) */
+
+section, .hero, .contact-card, header, footer {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 
@@ -313,20 +327,20 @@ section h3 {
 
 .phone-btn {
     display: inline-block;
-    background-color: var(--success-color);
+/*    background-color: var(--success-color); */
     color: var(--white);
     padding: 15px 35px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: bold;
+/*    font-weight: bold; */
     font-size: 18px;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-    transition: transform 0.2s, background-color 0.2s;
+/*    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3); */
+/*    transition: transform 0.2s, background-color 0.2s; */
 }
 
 .phone-btn:hover {
-    background-color: #059669;
-    transform: translateY(-2px);
+/*    background-color: #059669; */
+/*    transform: translateY(-2px); */
 }
 
 /* Footer */
@@ -359,3 +373,57 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+
+.righteous-regular {
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.footer-copy a {
+    color: inherit; /* Link przejmie kolor od rodzica, czyli szary z klasy .footer-copy */
+    text-decoration: none; /* Usuwa domyślne podkreślenie linku */
+}
+
+.footer-copy a:hover {
+    text-decoration: none; /* Opcjonalnie: doda subtelne podkreślenie, gdy najedziesz myszką */
+
+}
+
+
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.footer-regional {
+    font-size: 13.5px;
+    color: #94a3b8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.footer-pwz {
+    font-size: 13px;
+    color: #cbd5e1;
+    border-top: 1px solid #334155;
+    padding-top: 10px;
+}
+.footer-copy {
+    font-size: 12px;
+    color: #64748b;
+}
+
+
+
+/* Blokada kopiowania dla konkretnego zdjęcia */
+img[src="pmajkut.jpg"] {
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none;  /* Konqueror HTML */
+    -moz-user-select: none;     /* Firefox */
+    -ms-user-select: none;      /* Internet Explorer/Edge */
+    user-select: none;          /* Standardowa właściwość */
+    pointer-events: none;       /* Całkowicie wyłącza reakcję na kliknięcia i przeciąganie */
+}
+
